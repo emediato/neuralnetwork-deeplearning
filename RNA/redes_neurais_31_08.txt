@@ -1,0 +1,104 @@
+linguagem r
+primeira posicao 1
+
+
+Encontrar o z! 
+metodos imperativos !
+
+
+------------
+
+rm(list = ls())
+
+p<-20
+N<-5
+n<-4
+m<-2
+#amostragem de dados
+X<-matrix(runif(N*n), ncol = n, nrow = N)
+
+Y<-matrix(runif(N*m), ncol = m, nrow = N)
+
+######
+
+
+Z<-matrix(runif(n*p), ncol = p, nrow= 2)  (dimensao do vetor e retorna o vetor, numero de coluna)
+
+U<-Z%*%s
+H<-tanh(U)
+
+W<-matrix(runif(n*p), ncol=m,nrow =p)
+
+O<H%s*%W
+Y<-tanh(O)
+
+
+## erro
+E<-Y-Yhat
+
+View(Y)
+
+
+--------------------------
+
+m = 1 : 4 amostras !!! 1 saida apenas
+
+
+rm(list = ls())
+
+p<-20
+N<-5
+n<-4
+m<-1
+#amostragem de dados
+X<-matrix(runif(N*n), ncol = n, nrow = N)
+
+Y<-matrix(runif(N*m), ncol = m, nrow = N)
+
+######
+
+
+Z<-matrix(runif(n*p), ncol = p, nrow= 2)  (dimensao do vetor e retorna o vetor, numero de coluna)
+
+U<-Z%s*%s
+H<-tanh(U)
+
+W<-matrix(runif(n*p), ncol=m,nrow =p)
+
+O<-H%s*%W
+Y<-tanh(O)
+
+
+## erro
+E<-Y-Yhat
+-------------------------------------------------------------------------------------------------
+(barra invertida)section adaline
+
+
+rm(list = ls())
+
+N<-5
+n<-4
+
+###amostragem
+X<-matrix(runif(N*n), ncol = n, nrow = N)
+X<-cbind(1, X_)
+Y<-matrix(runif(N), ncol = 1, nrow = N)
+
+W<-matrix(runif(n=1), ncol = 1, nrow = n)
+
+O<-H%s*%W
+Yhat<-tanh(O)
+
+E<-Y-Yhat
+
+N = dados!!!!!!!!!!! 
+
+
+
+
+View(Y)
+
+
+
+

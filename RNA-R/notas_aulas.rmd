@@ -1,0 +1,53 @@
+---
+title: "R Trabbalho 1"
+author: < Mônica Emediato Mendes de Oliveira >
+date: < 11/9/22 >
+output: html_trabalho1
+
+---
+
+sempre transformar em matriz se nao tem como fazer produto
+
+transformar matriz na dimensao desejada, principalmente coluna > vetor
+
+plo numerico: aproximacao camadas
+
+The [R plugin](https://www.jetbrains.com/help/pycharm/r-plugin-support.html) for IntelliJ-based IDEs provides
+handy capabilities to work with the [R Markdown](https://www.jetbrains.com/help/pycharm/r-markdown.html) files.
+To [add](https://www.jetbrains.com/help/pycharm/r-markdown.html#add-code-chunk) a new R chunk,
+```
+
+```
+position the caret at any line or the code chunk, then click "+".
+
+The code chunk appears:
+
+Type any R code in the chunk, for example:
+```{r}
+
+#mycars <- within(mtcars, { cyl <- ordered(cyl) })
+#mycars
+
+rm(list=ls())
+
+library('corpcor')
+
+fgx<-function(xin) 0.5*xin^2 + 3*xin+10 #funcao fg(x)
+
+X<-runif(n=20, min=-15, max=10) # amostra
+Y<- fgx(X) + 20*rnorm(length(X))
+# aproximacao de grau dois
+
+H<-cbind(X^2, X,1)
+w<-pseudoinverse(H) %*% Y
+
+xgrid<-seq(-15, 10,0.1)
+ygrid<-(0.5*xgrid^2 + 3*xgrid+10)
+
+Hgrid<-cbind(xgrid^2, xgrid, 1)
+yhatgrid<-Hgrid %*% w
+
+```
+
+Now, click the **Run** button on the chunk toolbar to [execute](https://www.jetbrains.com/help/pycharm/r-markdown.html#run-r-code) the chunk code. The result should be placed under the chunk.
+Click the **Knit and Open Document** to build and preview an output.
